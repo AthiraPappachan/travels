@@ -20,9 +20,10 @@ public class vrlhomepage {
 	public void destinationdata(String arrivalplace) {
 		driver.findElement(destination).sendKeys(arrivalplace);
 	}
-	public void date() {
+	public void currentdate() {
 		driver.findElement(journeydate).click();
 		driver.findElement(daytotavel).click();
+		
 	}
 	public void check() {
 		driver.findElement(search).click();

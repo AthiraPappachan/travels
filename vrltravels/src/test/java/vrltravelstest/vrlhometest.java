@@ -37,7 +37,7 @@ public class vrlhometest {
 		vrlhomepage vh=new vrlhomepage(driver);
 		vh.sourcedata("bengaluru");
 		vh.destinationdata("ahamedabad");
-		vh.date();
+		vh.currentdate();
 		vh.check();
 	}
 	
