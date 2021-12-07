@@ -23,7 +23,7 @@ public class vrlhometest {
 	public void setup() {
 		
 		
-		System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\Nidhin\\\\Downloads\\\\Software Testing\\\\selenium\\\\chrome driver 94\\\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\Nidhin\\\\Downloads\\\\Software Testing\\\\selenium\\\\chrome driver 96\\\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 	}
@@ -31,15 +31,24 @@ public class vrlhometest {
 	public void start() {
 		driver.get(baseurl);
 	}
-	@Test
+	@Test(priority=1)
 	public void searchh() {
 		
 		vrlhomepage vh=new vrlhomepage(driver);
-		vh.sourcedata("bengaluru");
-		vh.destinationdata("ahamedabad");
-		vh.currentdate();
-		vh.check();
+		vh.journey();
 	}
+	@Test(priority=0)
+	public void titileverify(){
+		vrlhomepage vh=new vrlhomepage(driver);
+		vh.titileverification();		
+		
+	}
+	@Test(priority=2)
+	public void linksCount() {
+		vrlhomepage vh=new vrlhomepage(driver);
+		vh.totalLinks();
+	}
+	
 	
 }
 
